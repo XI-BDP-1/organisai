@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Profile Card</title>
 <style>
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes zoomIn {
+        0% {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
     body {
         font-family: Arial, sans-serif;
         background-color: #ded3be;
@@ -24,11 +45,14 @@
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         padding: 16px;
         text-align: center;
+        animation: fadeIn 0.8s ease-in-out;
     }
     .title {
         font-weight: bold;
-        font-size: 1.2em;
+        font-size: 1.5em;
         margin: 0 0 16px;
+        color: #4CAF50;
+        animation: zoomIn 0.8s ease-in-out;
     }
     .profile-pic {
         width: 100%;
@@ -36,14 +60,21 @@
         border-radius: 8px;
         overflow: hidden;
         background-color: #f0f0f0;
+        animation: fadeIn 1s ease-in-out;
     }
     .profile-pic img {
         width: 100%;
         border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .profile-pic img:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     }
     .info {
         margin-top: 16px;
         text-align: left;
+        animation: fadeIn 1.2s ease-in-out;
     }
     .info-item {
         display: flex;
@@ -65,7 +96,7 @@
     </div>
     <div class="info">
         <div class="info-item"><span>NAMA:</span> Mutiara indah</div>
-        <div class="info-item"><span>TTL:</span> Bogor	2008-01-08</div>
+        <div class="info-item"><span>TTL:</span> Bogor 2008-01-08</div>
         <div class="info-item"><span>AGAMA:</span> Islam</div>
         <div class="info-item"><span>JNS KLM:</span> perempuan</div>
         <div class="info-item"><span>ALAMAT:</span> kp.curug pulo</div>
@@ -80,7 +111,7 @@
     </div>
     <div class="info">
         <div class="info-item"><span>NAMA:</span> Firmansyah</div>
-        <div class="info-item"><span>TTL:</span> bogor 2008-02-20</div>
+        <div class="info-item"><span>TTL:</span> Bogor 2008-02-20</div>
         <div class="info-item"><span>AGAMA:</span> Islam</div>
         <div class="info-item"><span>JNS KLM:</span> laki laki</div>
         <div class="info-item"><span>ALAMAT:</span> kp. legok nyenang</div>

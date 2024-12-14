@@ -1,6 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url('Teks paragraf Anda.png') ;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     padding: 20px;
